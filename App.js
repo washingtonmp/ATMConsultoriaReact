@@ -8,6 +8,7 @@ import CenaPrincipal from './src/components/CenaPrincipal';
 import CenaClientes from './src/components/CenaClientes';
 import CenaContatos from './src/components/CenaContatos';
 import CenaEmpresa from './src/components/CenaEmpresa';
+import CenaServicos from './src/components/CenaServicos';
 
 
 export default class App extends Component {
@@ -15,30 +16,20 @@ export default class App extends Component {
       return(
 
           <Navigator 
+            
+            // definir a rota principal
             initialRoute={{id: 'CenaPrincipal'}}
+
+            // renderizar cenas 
             renderScene={(route, navigator) => {
-             
-              /*Definir a cena com base na rota*/
-              if(route.id === 'CenaPrincipal'){
-                //exibir cena principal
-                return(<CenaPrincipal navigator={navigator}/>);
-              }
 
-              if(route.id === 'CenaClientes'){
-                //exibir cena de clientes
-                return(<CenaClientes navigator={navigator}/>);
-              }
-
-              if(route.id === 'CenaContatos'){
-                //exibir cena de contatos
-                return(<CenaContatos navigator={navigator}/>);
-                
-              }
-
-              if(route.id === 'CenaEmpresa'){
-                //exibir cena da empresa
-                return(<CenaEmpresa navigator={navigator}/>);
-                
+              switch(route.id){
+                case 'CenaPrincipal': return(<CenaPrincipal navigator={navigator}/>);
+                case 'CenaClientes': return(<CenaClientes navigator={navigator}/>);
+                case 'CenaContatos': return(<CenaContatos navigator={navigator}/>);
+                case 'CenaEmpresa': return(<CenaEmpresa navigator={navigator}/>); 
+                case 'CenaServicos': return(<CenaServicos navigator={navigator}/>);
+                default: return false;
               }
 
             }}

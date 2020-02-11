@@ -12,9 +12,9 @@ const detalheContatos = require('../imgs/detalhe_contato.png');
 export default class CenaContatos extends Component {
     render(){
       return(
-        <View>
-            <StatusBar backgroundColor= '#CCC'/>
-            <BarraNavegacao voltar navigator={this.props.navigator} />
+        <View style={{flex: 1, backgroundColor: '#FFF'}}>
+            <StatusBar backgroundColor= '#61BD8C'/>
+            <BarraNavegacao corFundo='#61BD8C' voltar navigator={this.props.navigator} />
 
             <View style={styles.cabecalho}>
                 <Image source={ detalheContatos } />
@@ -22,13 +22,11 @@ export default class CenaContatos extends Component {
             </View>
 
             <View style={styles.detalheContatos}>
-
                 <Text style={styles.txtDetalheContatos}>TEL: (11) 1234 1234</Text>
                 <Text style={styles.txtDetalheContatos}>CEL: (11) 91234 1234</Text>
                 <Text style={styles.txtDetalheContatos}>EMAIL: contato@atmconsultoria.com</Text>
             </View>
-            
-            
+                
         </View>
               
       );

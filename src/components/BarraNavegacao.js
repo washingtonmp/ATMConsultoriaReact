@@ -10,9 +10,11 @@ export default class BarraNavegacao extends Component {
 
       if(this.props.voltar){
         return(
-            <View style = {styles.barraTitulo}> 
+            <View style = {[styles.barraTitulo,{backgroundColor: this.props.corFundo}]}> 
                
                <TouchableHighlight
+                  underlayColor={this.props.corFundo}  
+                  activeOpacity={0.3}
                   onPress={()=>{
                       this.props.navigator.pop();
                   }}>
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
             flex: 1,
             fontSize: 18,
             textAlign: 'center', 
-            color: '#000'
+            color: '#FFF'
         }
  
 });

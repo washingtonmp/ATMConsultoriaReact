@@ -29,17 +29,23 @@ export default class CenaPrincipal extends Component {
 
                 <View style={styles.secoes}>
                     
+                    {/* Menu Cena Clientes */}
                     <TouchableHighlight
-                      onPress={()=>{
-                          this.props.navigator.push({id: 'CenaClientes'});
-                      }}>
+                        underlayColor={'B9C941'}
+                        activeOpacity={0.3}
+                        onPress={()=>{
+                            this.props.navigator.push({id: 'CenaClientes'});
+                        }}>
                         <Image style={styles.imgMenu} source={menuCliente} />
                     </TouchableHighlight>
 
+                    {/* Menu cena contatos */}
                     <TouchableHighlight
-                      onPress={()=>{
-                          this.props.navigator.push({id: 'CenaContatos'});
-                      }}>
+                        underlayColor={'61BD8C'}
+                        activeOpacity={0.3}
+                        onPress={()=>{
+                            this.props.navigator.push({id: 'CenaContatos'});
+                        }}>
                         <Image style={styles.imgMenu} source={menuContato} />
                     </TouchableHighlight>
 
@@ -47,15 +53,28 @@ export default class CenaPrincipal extends Component {
 
                 <View style={styles.secoes}>
 
-                    <TouchableHighlight
-                      onPress={()=>{
-                          this.props.navigator.push({id: 'CenaEmpresa'});
-                      }}>
-                        <Image style={styles.imgMenu} source={menuEmpresa} /> />
+                     {/* Menu cena empresa */} 
+                     <TouchableHighlight
+                        underlayColor={'EC7148'}
+                        activeOpacity={0.3}
+                        onPress={()=>{
+                            this.props.navigator.push({id: 'CenaEmpresa'});
+                        }}>
+                        <Image style={styles.imgMenu} source={menuEmpresa} />
+                    </TouchableHighlight>
+
+                     {/* Menu cena servicos */} 
+                     <TouchableHighlight
+                        underlayColor={'19D1C8'}
+                        activeOpacity={0.3}
+                        onPress={()=>{
+                            this.props.navigator.push({id: 'CenaServicos'});
+                        }}>
+                        <Image style={styles.imgMenu} source={menuServico} /> 
                     </TouchableHighlight>
 
                     
-                    <Image style={styles.imgMenu} source={menuServico} /> 
+
                 </View>
 
             </View>
